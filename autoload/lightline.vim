@@ -21,7 +21,7 @@ function! lightline#update() abort
     let w = winnr()
     let s = winnr('$') == 1 && w > 0 ? [lightline#statusline(0)] : [lightline#statusline(0), lightline#statusline(1)]
     for n in range(1, winnr('$'))
-      call setwinvar(n, '&statusline', s[n!=w])
+      call setwinvar(n, '&statusline', has_key(s:lightline, 'filter') ? call(s:lightline.filter, [n, n!=w, s[n!=w]]) : s[n!=w])
     endfor
   endif
 endfunction
