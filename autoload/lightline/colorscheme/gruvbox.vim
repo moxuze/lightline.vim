@@ -29,7 +29,6 @@ if exists('g:lightline')
 
   let s:yellow = s:color('GruvboxYellow')
   let s:blue   = s:color('GruvboxBlue'  )
-  let s:aqua   = s:color('GruvboxAqua'  )
   let s:orange = s:color('GruvboxOrange')
   let s:green  = s:color('GruvboxGreen' )
   let s:purple = s:color('GruvboxPurple')
